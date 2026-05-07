@@ -1,6 +1,4 @@
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -29,36 +27,36 @@ matriz C */
         double listaA;
         double listaB;
 
-        List<Double> A = new ArrayList<>();
-        List<Double> B = new ArrayList<>();
-        List<Double> C = new ArrayList<>();
+        double[] A = new double[20];
+        double[] B = new double[20];
+        double[] C = new double[20];
         double resultado;
 
         for (int i = 0; i < 20; i++) {
             listaA = cpu.nextDouble(100) + 1;
             listaA = Math.round(listaA * 10.0) / 10.0;
-            A.add(listaA);
-
+            A[i] = listaA;
+            System.out.print(A[i] + ", ");
         }
-        System.out.println(A);
         System.out.println("\n");
-
+        
         for (int i = 0; i < 20; i++) {
             listaB = cpu.nextDouble(100) + 1;
             listaB = Math.round(listaB * 10.0) / 10.0;
-            B.add(listaB);
+            B[i] = listaB;
+            System.out.print(B[i] + ", ");
         }
-        System.out.println(B);
         System.out.println("\n");
+
         for (int i = 0; i < 20; i++) {
-            C.add(A.get(i) - B.get(i));
-            C.set(i,(Math.round(C.get(i) * 10.0) / 10.0));
-            if(C.get(i)< 0){
-                C.set(i, 0.0);
+            C[i] = A[i] - B[i];
+            C[i] = Math.round(C[i] * 10.0) / 10.0;
+            if (C[i] < 0) {
+                C[i] = 0.0;
             }
+            System.out.print(C[i] + ", ");
         }
         System.out.println("\n");
-        System.out.println(C);
-        
+
     }
 }
