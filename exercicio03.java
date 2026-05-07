@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class exercicio03 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {         // autor: Daniel .S
         /*     3. Escrever um programa que
 leia duas matrizes
 (denominadas A e B) do tipo
